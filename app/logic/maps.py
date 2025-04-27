@@ -18,8 +18,8 @@ class Maps:
             color='ventas',
             scope="usa",
             color_continuous_scale="Viridis",
-            width=600,
-            height=400
+            width=900,
+            height=600
         )
         return fig.to_html(full_html=False)
     
@@ -35,7 +35,9 @@ class Maps:
             y='ventas',
             title='Ventas por Año',
             labels={'year': 'Año', 'ventas': 'Ventas'},
-            text='ventas'
+            text='ventas',
+            width=900,
+            height=600
         )
         fig.update_traces(textposition='outside')
         fig.update_layout(xaxis=dict(dtick=1))
@@ -51,7 +53,9 @@ class Maps:
             x='make',
             y='ventas',
             title=f'Top {top_n} Marcas Más Vendidas',
-            text='ventas'
+            text='ventas',
+            width=900,
+            height=600
         )
         fig.update_traces(textposition='outside')
         fig.update_layout(xaxis_tickangle=-45)
@@ -69,7 +73,9 @@ class Maps:
             x='condition',
             y='sellingprice',
             title='Distribución de Precio por Condición del Vehículo',
-            labels={'condition': 'Condición', 'sellingprice': 'Precio de Venta'}
+            labels={'condition': 'Condición', 'sellingprice': 'Precio de Venta'},
+            width=900,
+            height=600
         )
         fig.update_layout(xaxis_title="Condición", yaxis_title="Precio de Venta")
         return fig.to_html(full_html=False)
@@ -89,7 +95,9 @@ class Maps:
             x='Modelo',
             y='Ventas',
             title=f'Top {top_n} Modelos Más Vendidos',
-            text='Ventas'
+            text='Ventas',
+            width=900,
+            height=600
         )
         fig.update_traces(textposition='outside')
         fig.update_layout(xaxis_tickangle=-45)

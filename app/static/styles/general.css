@@ -18,7 +18,7 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: var(--color-section-light-text);
+    background-color: var(--color-section-light-bg);
     color: var(--color-section-dark-text);
     line-height: 1.6;
 }

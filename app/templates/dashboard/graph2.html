@@ -1,35 +1,37 @@
 {% extends "dashboard/dashboard.html" %}
 
 {% block content %}
-  <div class="graph-container">
-    {{ mapa_html|safe }}
+  <div class="summary-container section-graph">
+    <div class="graph-container">
+      {{ mapa_html|safe }}
+    </div>
+  
+    <form class="form" method="get">
+      <label for="año_inicio">Desde el año:</label>
+      <select name="año_inicio">
+        <option value="">Todos</option>
+        {% for y in años %}
+          <option value="{{ y }}" {% if request.GET.año_inicio == y|stringformat:"s" %}selected{% endif %}>{{ y }}</option>
+        {% endfor %}
+      </select>
+  
+      <label for="año_fin">Hasta el año:</label>
+      <select name="año_fin">
+        <option value="">Todos</option>
+        {% for y in años %}
+          <option value="{{ y }}" {% if request.GET.año_fin == y|stringformat:"s" %}selected{% endif %}>{{ y }}</option>
+        {% endfor %}
+      </select>
+  
+      <label for="make">Marca:</label>
+      <select name="make">
+        <option value="">Todas</option>
+        {% for m in marcas %}
+          <option value="{{ m }}" {% if request.GET.make == m %}selected{% endif %}>{{ m }}</option>
+        {% endfor %}
+      </select>
+  
+      <button type="submit" class="buttons btn">Filtrar</button>
+    </form>
   </div>
-
-  <form class="form" method="get">
-    <label for="año_inicio">Desde el año:</label>
-    <select name="año_inicio">
-      <option value="">Todos</option>
-      {% for y in años %}
-        <option value="{{ y }}" {% if request.GET.año_inicio == y|stringformat:"s" %}selected{% endif %}>{{ y }}</option>
-      {% endfor %}
-    </select>
-
-    <label for="año_fin">Hasta el año:</label>
-    <select name="año_fin">
-      <option value="">Todos</option>
-      {% for y in años %}
-        <option value="{{ y }}" {% if request.GET.año_fin == y|stringformat:"s" %}selected{% endif %}>{{ y }}</option>
-      {% endfor %}
-    </select>
-
-    <label for="make">Marca:</label>
-    <select name="make">
-      <option value="">Todas</option>
-      {% for m in marcas %}
-        <option value="{{ m }}" {% if request.GET.make == m %}selected{% endif %}>{{ m }}</option>
-      {% endfor %}
-    </select>
-
-    <button type="submit" class="buttons btn">Filtrar</button>
-  </form>
 {% endblock %}
