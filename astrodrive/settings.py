@@ -79,13 +79,13 @@ WSGI_APPLICATION = 'astrodrive.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mssql',
-        'NAME': 'AstroDrive',        # Nombre de la base de datos
-        'USER': 'sa',               # Usuario SQL Server
-        'PASSWORD': '123456',        # Contraseña del usuario
-        'HOST': 'localhost',                # O dirección IP del servidor
-        'PORT': '',                     # Puerto por defecto de SQL Server
+        'NAME': 'AstroDrive',        
+        'HOST': 'localhost\\SQLEXPRESS',               
+        'PORT': '',                    
         'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',  # O el que tengas instalado
+            'driver': 'ODBC Driver 17 for SQL Server', 
+            'trustServerCertificate': 'yes',
+            'trusted_connection': 'yes'
         },
     }
 }
