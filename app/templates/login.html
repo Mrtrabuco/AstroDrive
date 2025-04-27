@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>AstroDriver - Login</title>
+    <link rel="icon" href="{% static 'img/favicon-32x32.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="hero-bg">
+        <div class="login-box">
+            <h2>Iniciar Sesión</h2>
+            <p>Bienvenido de nuevo a <strong>AstroDriver</strong></p>
+            <form class="form" method="post">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                <div class="input-group">
+                    <label for="id_username">Usuario</label>
+                    {{ form.username }}
+                </div>
+                <div class="input-group">
+                    <label for="id_password">Contraseña</label>
+                    {{ form.password }}
+                </div>
+                <div class="btn-lr">
+                    <button type="submit">Iniciar sesion</button>
+                    <a href="{% url 'registro' %}" class="text-lr">¿No tienes cuenta? Registrate</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <a href="{% url 'inicio' %}" class="btn-home" title="Inicio">
+        <i class="fas fa-home"></i>
+    </a>
+</body>
+</html>

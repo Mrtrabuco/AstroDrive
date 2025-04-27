@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img/favicon-32x32.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'styles/general.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/dashboard.css' %}">
+    <title>AstroDriver - Dashboard</title>
+</head>
+<body>
+  <header>
+    
+  </header>
+
+  <main class="dashboard">
+      <div class="tabs">
+        <div class="tab-button">
+          <img src="{{ user.foto.url }}" alt="User Icon" class="user-icon">
+          <span class="user-name">{{ user.username|upper }}</span>
+        </div>
+        <div class="btn-maps">
+          <form action="{% url 'dashboard' %}" method="get">
+            <button class="tab-button">
+              <span>Resumen</span>
+            </button>
+          </form>
+          <form action="{% url 'mapa1' %}" method="get">
+            <button class="tab-button">
+              <span>Ventas por Estado</span>
+            </button>
+          </form>
+          <form action="{% url 'mapa2' %}" method="get">
+            <button class="tab-button">
+              <span>Ventas Anuales</span>
+            </button>
+          </form>
+          <form action="{% url 'mapa3' %}" method="get">
+            <button class="tab-button">
+              <span>Marcas Más Vendidas</span>
+            </button>
+          </form>
+          <form action="{% url 'mapa4' %}" method="get">
+            <button class="tab-button">
+              <span>Precio por Condición</span>
+            </button>
+          </form>
+          <form action="{% url 'mapa5' %}" method="get">
+            <button class="tab-button">
+              <span>Modelos Más Vendidos</span>
+            </button>
+          </form>
+        </div>
+        <form method="POST" action="{% url 'logout' %}">
+          {% csrf_token %}
+          <button class="tab-button">
+            <span>Cerrar sesion</span>
+          </button>
+        </form>
+      </div>
+      <div class="tab-content">
+        <div class="chart-card">
+          {% block content %}
+
+          {% endblock %}
+        </div>
+      </div>
+  </main>
+
+<footer>
+    &copy; 2025 AstroDriver - Todos los derechos reservados.
+</footer>
+</body>
+</html>

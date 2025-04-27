@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroDriver - Inicio</title>
+    <link rel="icon" href="{% static 'img/favicon-32x32.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/general.css' %}">
+</head>
+<body>
+    <!-- HERO / BIENVENIDA -->
+    <section class="hero">
+        <div class="container">
+            <h1>Bienvenido a <span>AstroDriver</span></h1>
+            <p>Tu plataforma para explorar datos de compras de vehículos como nunca antes.</p>
+            <div class="buttons">
+                <a href="{% url 'login' %}" class="btn">Iniciar sesion</a>
+                <a href="{% url 'registro' %}" class="btn outline">Register</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section class="section light">
+        <div class="container">
+            <h2>¿Quiénes somos?</h2>
+            <p>Somos un equipo apasionado por los datos y la visualización. AstroDriver nace con la idea de transformar datos masivos en conocimientos accionables para usuarios, empresas y entidades gubernamentales.</p>
+        </div>
+    </section>
+
+    <!-- MISIÓN -->
+    <section class="section dark">
+        <div class="container">
+            <h2>Misión</h2>
+            <p>Brindar herramientas interactivas y visuales que permitan entender el comportamiento de compras de vehículos y facilitar la toma de decisiones basada en datos.</p>
+        </div>
+    </section>
+
+    <!-- VISIÓN -->
+    <section class="section light">
+        <div class="container">
+            <h2>Visión</h2>
+            <p>Ser referentes en análisis visual de datos de consumo en América Latina, acercando la analítica avanzada a todos los usuarios.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AstroDriver - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+:root {
+    --color-bg-hero-start: #1f1f1f;
+    --color-bg-hero-end: #2d2d2d;
+    --color-section-light-bg: #ffffff;
+    --color-section-light-text: #222222;
+    --color-section-dark-bg: #161b22;
+    --color-section-dark-text: #c9d1d9;
+    --color-heading: #00bcd4;
+    --color-footer-bg: #161b22;
+    --color-footer-text: #8b949e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--color-section-light-text);
+    color: var(--color-section-dark-text);
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--color-heading);
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  background-color: #1f2933;
+  color: var(--color-section-light-bg);
+  border: 1px solid var(--color-heading);
+  padding: 0.5rem;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 1rem;
+  transition: border 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #0097a7;
+}
+
+/* 🧾 Etiquetas */
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--color-heading);
+  font-weight: 500;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+.btn {
+    background-color: var(--color-heading);
+    border: none;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #0097a7;
+}
+
+.btn.outline {
+    background-color: transparent;
+    border: 2px solid var(--color-heading);
+    color: #00bcd4;
+}
+
+.btn.outline:hover {
+    background-color: var(--color-heading);
+    color: var(--color-section-light-bg);
+}
+
+.form {
+    margin-bottom: 2rem;
+    background-color: #1e252f;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  /* 📊 Gráficos o resultados */

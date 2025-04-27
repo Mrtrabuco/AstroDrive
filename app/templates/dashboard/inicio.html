@@ -1,0 +1,40 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block content %}
+<div class="summary-container">
+    <h1 class="dashboard-title">Resumen de Gráficas de Ventas</h1>
+    <p class="summary-description">En este apartado podrás encontrar una visión general de las ventas de vehículos, segmentadas por diferentes criterios y presentadas en gráficos interactivos.</p>
+    
+    <div class="summary-section">
+      <h2 class="section-title">1. Mapa de Ventas por Estado</h2>
+      <p class="section-description"><strong>Descripción:</strong> Visualiza las ventas distribuidas por estados de EE. UU. con un mapa interactivo que utiliza el gráfico de tipo *choropleth* para mostrar las áreas con mayor actividad de ventas.</p>
+      <p class="section-description"><strong>Visualización:</strong> El gráfico resalta los estados con mayor número de ventas en función de un mapa de calor con la escala "Viridis".</p>
+    </div>
+
+    <div class="summary-section">
+      <h2 class="section-title">2. Gráfico de Ventas Anuales</h2>
+      <p class="section-description"><strong>Descripción:</strong> Muestra la evolución de las ventas año tras año. Permite identificar tendencias de crecimiento o disminución de ventas en cada año.</p>
+      <p class="section-description"><strong>Visualización:</strong> Un gráfico de barras donde cada barra representa las ventas de un año, con las cifras exactas mostradas sobre cada barra.</p>
+    </div>
+
+    <div class="summary-section">
+      <h2 class="section-title">3. Top 10 Marcas Más Vendidas</h2>
+      <p class="section-description"><strong>Descripción:</strong> Muestra las marcas más vendidas en el período analizado. Ayuda a identificar las marcas con mayor demanda en el mercado.</p>
+      <p class="section-description"><strong>Visualización:</strong> Un gráfico de barras con las marcas en el eje X y el número de ventas en el eje Y. Las barras están etiquetadas con la cantidad exacta de ventas y muestran la popularidad de cada marca.</p>
+    </div>
+
+    <div class="summary-section">
+      <h2 class="section-title">4. Distribución de Precio por Condición del Vehículo</h2>
+      <p class="section-description"><strong>Descripción:</strong> Visualiza cómo se distribuyen los precios de los vehículos según su condición (nuevo, usado, etc.).</p>
+      <p class="section-description"><strong>Visualización:</strong> Un gráfico de caja (box plot) que muestra la dispersión de los precios de venta según las distintas condiciones de los vehículos.</p>
+    </div>
+
+    <div class="summary-section">
+      <h2 class="section-title">5. Top 10 Modelos Más Vendidos</h2>
+      <p class="section-description"><strong>Descripción:</strong> Muestra los modelos más vendidos, permitiendo identificar cuáles son los más populares en el mercado.</p>
+      <p class="section-description"><strong>Visualización:</strong> Un gráfico de barras con los modelos en el eje X y el número de ventas en el eje Y. Cada barra está etiquetada con la cantidad de ventas.</p>
+    </div>
+
+    <p class="summary-footer">Estos gráficos son completamente interactivos y permiten personalizar los datos según diferentes filtros, como el año o la marca, para obtener una visión más detallada y relevante.</p>
+</div>
+{% endblock %}

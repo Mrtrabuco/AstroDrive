@@ -1,0 +1,42 @@
+/* Hero */
+
+.hero {
+    background: linear-gradient(135deg, var(--color-bg-hero-start), var(--color-bg-hero-end));
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* SECCIONES */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section.light {
+    background-color: var(--color-section-light-bg);
+    color: var(--color-section-light-text);
+}
+
+.section.dark {
+    background-color: var(--color-section-dark-bg);
+    color: var(--color-section-dark-text);
+}
+
+.section h2 {
+    color: var(--color-heading);
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-footer-bg);
+    font-size: 0.9rem;
+    color: var(--color-footer-text);
+}

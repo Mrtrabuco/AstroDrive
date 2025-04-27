@@ -1,0 +1,30 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block content %}
+  <div class="graph-container">
+    {{ grafico_html|safe }}
+  </div>
+
+  <form class="form" method="get">
+    <label for="año_inicio">Desde el año:</label>
+    <select name="año_inicio">
+      <option value="">Todos</option>
+      {% for y in años %}
+        <option value="{{ y }}" {% if request.GET.año_inicio == y|stringformat:"s" %}selected{% endif %}>{{ y }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="año_fin">Hasta el año:</label>
+    <select name="año_fin">
+      <option value="">Todos</option>
+      {% for y in años %}
+        <option value="{{ y }}" {% if request.GET.año_fin == y|stringformat:"s" %}selected{% endif %}>{{ y }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="top_n">Top N:</label>
+    <input type="number" name="top_n" value="{{ top_n }}" min="1">
+
+    <button type="submit" class="buttons btn">Filtrar</button>
+  </form>
+{% endblock %}

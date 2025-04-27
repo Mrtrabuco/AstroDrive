@@ -1,0 +1,135 @@
+.graph-container {
+    border: 1px solid #00bcd4;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.tab-button .user-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.tab-button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    min-width: 30px;
+    min-height: 50px;
+    justify-content: left;
+    padding: 5px 20px;
+    align-items: center;
+    gap: 25px;
+    padding-right: 30px;
+    border-radius: 40px;
+    color: white;
+}
+
+.tab-button:hover {
+    background-color: #cccccc1a;
+}
+
+.tab-button i {
+    font-size: 25px;
+}
+
+.tab-button span {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.tab-button .is-selected {
+    font-weight: 700;
+}
+
+.btn-maps .tab-button span {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}       
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.tabs {  
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    padding: 0px 10px;
+    padding-right: 30px;
+    width: 350px;
+    height: 100vh;
+    background-color: #1e252f;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0d1117;
+    font-size: 0.9rem;
+    color: var(--color-footer-text);
+}
+
+/* Contenedor de resumen con scroll */
+.summary-container {
+    max-width: 95%;
+    margin: 0 auto;
+    max-height: 90vh; /* Ajusta la altura según lo que necesites */
+    overflow-y: auto; /* Activa el desplazamiento vertical */
+    padding-right: 10px; /* Espacio para el scrollbar */
+    color: black;
+}
+
+/* Estilo para el contenido dentro del resumen */
+.summary-section {
+    margin-bottom: 30px;
+}
+
+/* Opcional: para personalizar el scrollbar */
+.summary-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.summary-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.summary-container::-webkit-scrollbar-thumb {
+    background-color: #00bcd4;
+    border-radius: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form
+input[type="text"],
+.form input[type="number"],
+.form select {
+  background-color: #1f2933;
+  color: #fff;
+  border: 1px solid #00bcd4;
+  padding: 0.5rem;
+  border-radius: 6px;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  transition: border 0.3s ease;
+}
